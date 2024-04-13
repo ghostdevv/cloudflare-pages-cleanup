@@ -1,6 +1,6 @@
 # Cloudflare Pages Cleanup
 
-Old deployments in pages are not always a problem, but can be (for example) if your deployment URLs are public and you make security fix.
+Old deployments in pages are not always a problem, but can be (for example) if your deployment URLs are public and you make a security fix. This script when ran will delete deployments older than two weeks.
 
 ## Running
 
