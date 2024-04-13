@@ -11,6 +11,8 @@ const pages = ofetch.create({
 	headers: {
 		Authorization: `Bearer ${env.CLOUDFLARE_TOKEN}`,
 	},
+	retryDelay: 1000,
+	retry: 5,
 });
 
 async function fetch_all_deployments(page = 1): Promise<Deployment[]> {
