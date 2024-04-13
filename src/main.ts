@@ -64,7 +64,8 @@ for (const deployment of deployments) {
 				.catch((e: FetchError) => {
 					console.log(
 						colors.bold.red('  FAILED'),
-						colors.dim(`${e.data?.errors[0]?.message}`),
+						`(${e.status})`,
+						colors.dim(`${e.data?.errors?.[0]?.message}`),
 					);
 				})
 				.then(() => deleted++);
