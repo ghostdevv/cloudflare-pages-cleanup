@@ -4,11 +4,13 @@ Old deployments in pages are not always a problem, but can be (for example) if y
 
 ## Running
 
-You'll need [Deno](https://docs.deno.com/runtime/manual) to run this script.
+You'll need [Deno](https://docs.deno.com/runtime/manual) to run this script and to clone/download this repo.
 
-1. Clone this repo
+Step 1: Create a `.env` file, using the `.env.example` as an example.
 
-2. Create a `.env` file, using the `.env.example` as an example
+```bash
+cp .env.example .env
+```
 
 <details>
     <summary>CLOUDFLARE_ACCOUNT_ID</summary>
@@ -16,6 +18,7 @@ You'll need [Deno](https://docs.deno.com/runtime/manual) to run this script.
     You can find your Cloudflare account id in the URL bar, it'll look something like this:
 
     ![url bar showing cloudflare account id](./.github/account-id.png)
+
 </details>
 
 <details>
@@ -26,6 +29,7 @@ You'll need [Deno](https://docs.deno.com/runtime/manual) to run this script.
     Select the "Edit Cloudflare Workers template"
 
     ![cf dash api token](./.github/cf-api-token-template.png)
+
 </details>
 
 <details>
@@ -34,4 +38,8 @@ You'll need [Deno](https://docs.deno.com/runtime/manual) to run this script.
     This is the name of your pages project which you set when you created it
 </details>
 
-3. Run `deno task run`
+Finally you can run the script
+
+```bash
+deno task run
+```
